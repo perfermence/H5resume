@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- dev 开发环境-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/index.min.css">
+    <!--<link rel="stylesheet/less" href="css/index.less">-->
+    <!--<script src="js/less-3.8.1.min.js"></script>-->
+    <!--prefixfree.min.js：设置前缀的-->
+    <!--REM-->
+    <script>
+        //根据当前设备的宽度，动态计算出REM的换算比例，实现页面中元素的等比缩放
+        ~function anonymous() {
+            let computedREM = function () {
+                let winW = document.documentElement.clientWidth,
+                    desW = 640;
+                if (winW >= 640) {
+                    document.documentElement.style.fontSize = '100px';
+                    return;
+                }
+                document.documentElement.style.fontSize = winW / desW * 100 + 'px';
+            };
+            computedREM();
+            window.addEventListener('resize', computedREM);
+        }();
+    </script>
+</head>
+<body>
+<!-- 外面套一层mainBox：控制当前页面的最大宽度，防止把做好的页面在PC端预览的时候满屏显示，这样字体和盒子大小等被肆意拉升-->
+<main class="mainBox">
+    <!-- loading -->
+    <section class="loadingBox">
+        <div class="title">
+            <h1>珠峰培训</h1>
+            <h2>H5场景交互型简历</h2>
+        </div>
+        <div class="progress">
+            <div class="current"></div>
+        </div>
+    </section>
+
+    <!--phone-->
+    <section class="phoneBox">
+        <h2>
+            <img src="img/zf_phoneLogo.png" alt="">
+            <span>00:00</span>
+        </h2>
+        <div class="answer">
+            <div class="markMove"></div>
+            <a href="javascript:;" class="markLink"></a>
+        </div>
+        <div class="hang">
+            <a href="javascript:;" class="markLink"></a>
+        </div>
+        <!-- Audio -->
+        <audio src="audio/bell.mp3" loop preload="none" id="answerBell"></audio>
+        <audio src="audio/say.mp3" loop preload="none" id="introduction"></audio>
+    </section>
+
+    <!--message-->
+    <section class="messageBox">
+        <ul class="wrapper">
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+            <li class="self">
+                <i class="arrow"></i>
+                <img src="img/zf_messageStudent.png" alt="" class="pic">
+                面试官您好，我叫宋丹，毕业于南京邮电大学，学习的是信息管理与信息系统专业
+            </li>
+            <li class="interviewer">
+                <i class="arrow"></i>
+                <img src="img/zf_messageLogo.png" alt="" class="pic">
+                嗯，不错，介绍一下自己的专业技能
+            </li>
+        </ul>
+        <div class="keyBoard">
+            <span></span>
+            <a href="javascript:;" class="submit"></a>
+        </div>
+        <audio src="audio/music.mp3" preload="none" loop id="demonMusic"></audio>
+    </section>
+
+    <!--cube-->
+    <section class="cubeBox">
+        <ul class="cube">
+            <li><img src="img/zf_cube1.png" alt=""></li>
+            <li><img src="img/zf_cube2.png" alt=""></li>
+            <li><img src="img/zf_cube3.png" alt=""></li>
+            <li><img src="img/zf_cube4.png" alt=""></li>
+            <li><img src="img/zf_cube5.png" alt=""></li>
+            <li><img src="img/zf_cube6.png" alt=""></li>
+        </ul>
+        <img src="img/zf_cubeTip.png" alt="" class="tip">
+    </section>
+
+    <!--detail-->
+    <section class="detailBox">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--page1-->
+                <div class="swiper-slide page1">
+                    <dl>
+                        <dt>课程大纲</dt>
+                        <dd>
+                            <em>01</em>
+                            <a href="#">HTML5+CSS3+移动式响应布局开发及相关插件的应用</a>
+                        </dd>
+                        <dd>
+                            <em>02</em>
+                            <a href="#">JS中的闭包及堆栈内存以及THIS的处理</a>
+                        </dd>
+                        <dd>
+                            <em>03</em>
+                            <a href="#">JS中的面向对象编程，可以基于面向对象封装插件</a>
+                        </dd>
+                        <dd>
+                            <em>04</em>
+                            <a href="#">ES6中的新特性及数组对象里面的常用方法</a>
+                        </dd>
+                        <dd>
+                            <em>05</em>
+                            <a href="#">JS中的同步异步编程及promise设计模式</a>
+                        </dd>
+                        <dd>
+                            <em>06</em>
+                            <a href="#">JS中的事件委托及事件池及发布订阅模式</a>
+                        </dd>
+                        <dd>
+                            <em>07</em>
+                            <a href="#">JS中的DOM操作以及重绘和回流的操作</a>
+                        </dd>
+                        <dd>
+                            <em>08</em>
+                            <a href="#">HTTP交互及AJAX库的封装以及跨域数据共享</a>
+                        </dd>
+                        <dd>
+                            <em>09</em>
+                            <a href="#">VUE:VUE-CLI/VUE-ROUTER/VUEX/VUE ELEMENT 等全家桶</a>
+                        </dd>
+                        <dd>
+                            <em>10</em>
+                            <a href="#">REACT:REACT-ROUTER/REACT-REDUX/DVA/AXIOS/ANT等</a>
+                        </dd>
+                        <dd>
+                            <em>11</em>
+                            <a href="#">辅助技能：NODE/WEBPACK/GIT等</a>
+                        </dd>
+                    </dl>
+                </div>
+                <!--page2-->
+                <div class="swiper-slide page2">
+                    <h2>课程体系</h2>
+                    <img src="img/zf_course1.png" alt="">
+                    <img src="img/zf_course2.png" alt="">
+                    <img src="img/zf_course3.png" alt="">
+                    <img src="img/zf_course4.png" alt="">
+                    <img src="img/zf_course5.png" alt="">
+                    <img src="img/zf_course6.png" alt="">
+                    <img src="img/zf_course.png" alt="">
+                </div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+                <div class="swiper-slide"></div>
+            </div>
+        </div>
+    </section>
+</main>
+<!--import js-->
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/makisu.min.js"></script>
+<script src="js/index.js"></script>
+</body>
+</html>
